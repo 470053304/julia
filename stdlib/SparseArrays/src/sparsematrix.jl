@@ -3581,15 +3581,15 @@ passing `m` and `n` as the first arguments.
 ```jldoctest
 julia> spdiagm([1,2,3])
 3×3 SparseMatrixCSC{Int64, Int64} with 3 stored entries:
-1  ⋅  ⋅
-⋅  2  ⋅
-⋅  ⋅  3
+ 1  ⋅  ⋅
+ ⋅  2  ⋅
+ ⋅  ⋅  3
 
 julia> spdiagm(sparse([1,0,3]))
 3×3 SparseMatrixCSC{Int64, Int64} with 2 stored entries:
-1  ⋅  ⋅
-⋅  ⋅  ⋅
-⋅  ⋅  3
+ 1  ⋅  ⋅
+ ⋅  ⋅  ⋅
+ ⋅  ⋅  3
 ```
  """
 spdiagm(v::AbstractVector) = _spdiagm(nothing, 0 => v)
